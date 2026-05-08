@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Mon Portfolio</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* ── Fond noir global ── */
+            body {
+                background-color: #111111 !important;
+                color: #f0f0f0 !important;
+                font-family: 'Lato', sans-serif;
+            }
+
+            /* ── Navbar ── */
+            .navbar.bg-secondary {
+                background-color: #1a1a1a !important;
+                border-bottom: 2px solid #ffe066;
+            }
+            .navbar-brand,
+            .nav-link {
+                color: #ffe066 !important;
+            }
+            .nav-link:hover {
+                background-color: #ffe066 !important;
+                color: #111111 !important;
+                border-radius: 4px;
+            }
+            .navbar-toggler {
+                background-color: #ffe066 !important;
+                color: #111111 !important;
+                border: none;
+            }
+
+            /* ── Masthead (header) ── */
+            .masthead.bg-primary {
+                background-color: #000000 !important;
+                border-bottom: 3px solid #ffe066;
+            }
+            .masthead h1,
+            .masthead p {
+                color: #ffe066 !important;
+            }
+            .divider-light .divider-custom-line {
+                background-color: #ffe066 !important;
+            }
+            .divider-light .divider-custom-icon {
+                color: #ffe066 !important;
+            }
+
+            /* ── Section Portfolio ── */
+            .page-section.portfolio {
+                background-color: #1a1a1a !important;
+            }
+            .page-section-heading.text-secondary {
+                color: #ffe066 !important;
+            }
+            .divider-custom-line {
+                background-color: #ffe066 !important;
+            }
+            .divider-custom-icon {
+                color: #ffe066 !important;
+            }
+
+            /* ── Portfolio items ── */
+            .portfolio-item {
+                border: 2px solid #ffe066;
+                border-radius: 6px;
+                overflow: hidden;
+            }
+            .portfolio-item-caption {
+                background-color: rgba(255, 224, 102, 0.85) !important;
+            }
+            .portfolio-item-caption-content {
+                color: #111111 !important;
+            }
+
+            /* ── Section À propos ── */
+            .page-section.bg-primary {
+                background-color: #1a1a1a !important;
+                border-top: 3px solid #ffe066;
+                border-bottom: 3px solid #ffe066;
+            }
+            .page-section.bg-primary h2,
+            .page-section.bg-primary p,
+            .page-section.bg-primary .lead {
+                color: #f0f0f0 !important;
+            }
+            .btn-outline-light {
+                border-color: #ffe066 !important;
+                color: #ffe066 !important;
+            }
+            .btn-outline-light:hover {
+                background-color: #ffe066 !important;
+                color: #111111 !important;
+            }
+
+            /* ── Section Contact ── */
+            .page-section#contact {
+                background-color: #111111 !important;
+            }
+            .page-section#contact h2 {
+                color: #ffe066 !important;
+            }
+            .form-control {
+                background-color: #1e1e1e !important;
+                color: #f0f0f0 !important;
+                border-color: #ffe066 !important;
+            }
+            .form-control:focus {
+                border-color: #ffe066 !important;
+                box-shadow: 0 0 0 0.2rem rgba(255,224,102,0.25) !important;
+            }
+            .form-floating label {
+                color: #aaaaaa !important;
+            }
+            .btn-primary {
+                background-color: #ffe066 !important;
+                border-color: #ffe066 !important;
+                color: #111111 !important;
+                font-weight: 700;
+            }
+            .btn-primary:hover {
+                background-color: #ffd11a !important;
+                border-color: #ffd11a !important;
+                color: #111111 !important;
+            }
+            .btn-xl {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+
+            /* ── Footer ── */
+            .footer {
+                background-color: #1a1a1a !important;
+                border-top: 2px solid #ffe066;
+                color: #f0f0f0 !important;
+            }
+            .footer h4 {
+                color: #ffe066 !important;
+            }
+            .footer .lead,
+            .footer p {
+                color: #cccccc !important;
+            }
+            .footer a {
+                color: #ffe066 !important;
+            }
+            .footer a:hover {
+                color: #ffd11a !important;
+            }
+            .btn-outline-light.btn-social {
+                border-color: #ffe066 !important;
+                color: #ffe066 !important;
+            }
+            .btn-outline-light.btn-social:hover {
+                background-color: #ffe066 !important;
+                color: #111111 !important;
+            }
+
+            /* ── Copyright ── */
+            .copyright {
+                background-color: #0a0a0a !important;
+                color: #888888 !important;
+            }
+            .copyright small {
+                color: #888888 !important;
+            }
+
+            /* ── Modales ── */
+            .modal-content {
+                background-color: #1a1a1a !important;
+                color: #f0f0f0 !important;
+                border: 1px solid #ffe066;
+            }
+            .modal-header {
+                border-bottom: 1px solid #ffe066 !important;
+            }
+            .btn-close {
+                filter: invert(1) sepia(1) saturate(5) hue-rotate(0deg);
+            }
+            .portfolio-modal-title {
+                color: #ffe066 !important;
+            }
+            .modal-body p {
+                color: #cccccc !important;
+            }
+            /* Image agrandie dans la modale */
+            .modal-body .img-fluid {
+                width: 100% !important;
+                max-height: 500px;
+                object-fit: cover;
+                border: 2px solid #ffe066;
+                border-radius: 6px;
+            }
+
+            /* Icône étoile du divider */
+            .fas.fa-star {
+                color: #ffe066 !important;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Mon Portfolio</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfeuille</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">A propos</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center ">
+            
+           <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                 <div class="col-md-5 text-center mb-4 mb-md-0">
+                <img class="masthead-avatar mb-5" src="face.png" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Keba Diop</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Designer UI/XI - Developeur Web - Developeur Back-end</p>
+            </div>
+        </header>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfeuille</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="k1.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="k2.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="k3.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="k4.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 5-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="k5.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 6-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="k6.png" alt="..." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">A Propos</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">je m'appele Keba Diop un devoloppeur experimentè pouvant vous servire a de multiple fonction.Que ce soit designe, back-end ,front-end ou même des projets multiples tout cele me permet de prendre soint de votre entreprise.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">Mes 10ans d'experiance fonts de moi un developpeur Señor adapter a plusiers langages comme (HTML CSS JS PYHON C# C++ JAVA ...) Donc me contacter n'est pas simplement une assurence mes un garentie.</p></div>
+                </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="cv.png">
+                        <i class="fas fa-download me-2"></i>
+                       Telecharger mon cv
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Prenom et Nom</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Votre Nom est requis.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Address mail </label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">Votre mail est requis.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Votre mail n'est pas valide.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Numero de telephone</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Votre numero est requis.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">le message est imperatif.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erreur envoyer un message!</div></div>
+                            <!-- Submit Button-->
+                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Adress</h4>
+                        <p class="lead mb-0">
+                            Avenue Cheikh Anta Diop
+                            <br />
+                            Canal Iv,Dakar,Sn
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Me joindre aussi sur</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-instagram"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">Travail en ligne </h4>
+                        <p class="lead mb-0">
+                            je travail aussi en ligne ou a temps partielle pour differentes entreprises <br>
+                            <a href="https://boutique.orange.sn/?gad_source=1&gad_campaignid=22260260387&gbraid=0AAAAABs4gkif6I5TMjcC18UICl4-UwHsj&gclid=Cj0KCQjwk_bPBhDXARIsACiq8R2oPHpyoRQz7fgQZy7mjgjyJp1eN74uSE2dEPvgd4k2ksyMwDWheXsaAlXtEALw_wcB">Orange.Sn</a>-<a href="https://www.ccbmauto.com/fr">CCBM electro</a>-<a href="https://www.sesam-informatics.com">Sesam</a>
+                            
+                        </p>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Droit d'auteur &copy; Portfolio de Keba Diop</small></div>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="k1.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">j'ai conçue une application synonime de bloc note ou journale intime permetant au gent de pouvoir y ecrire et se relaxer.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">RESTO-APP</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="k2.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">POUR celle-ci il y a la version web et mobile vous permetant de commander en temp et en heure ou aue vous soyez sur Dakar.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">GAME REALMS</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="k3.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Vous voulez vous detendre ? telecharger cette app contenent plus de 200 jeux juste pour vous divertire .</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">GLOBAL CONNECT</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="k4.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">C'est une application que j'ai mise en ligne pour permetre a une des entreprises avec lesquelles j'ai colaborer de pouvoir avoir acces a leurs base de donner en temps reel </p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">ATLETIX</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="k5.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">c'est assi une de mes applications conçu pendant le confimnement en 2020 et permet au gens de faire du sport a la maison celle-ci vous calcule combien de calorie prendre ou perdre en fonction de votre poids .</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">ELEGANCE HAIR</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="k6.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Envie de nouvelles coiffure, cette app a uniquement etait mis en place pour vous permetre de choisir la coiffure ideal au moment voulue.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
